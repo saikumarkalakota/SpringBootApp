@@ -1,5 +1,6 @@
 package brains.springbootapp.topic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,11 +16,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TopicService {
 	
-	private List<Topic> topics =  Arrays.asList(
+	private List<Topic> topics = new ArrayList<> (Arrays.asList(
 			new Topic ("spring","Spring framework", "Spring framework Description"),
 			new Topic ("java","java framework", "java framework Description"),
 			new Topic ("DotNet","DotNet framework", "DotNet framework Description")
-			);
+			));
 
 
 	public List<Topic> getAllTopics() {
